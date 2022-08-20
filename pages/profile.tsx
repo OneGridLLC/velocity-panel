@@ -6,46 +6,21 @@ import ResourceItem from "../components/homepage/ResourceItem";
 import ResourcesTable from "../components/homepage/ResourcesTable";
 import Navbar from "../components/Navbar";
 
-const Home: NextPage = () => {
+const Profile: NextPage = () => {
   return (
     <div className="flex flex-col w-screen h-screen bg-zinc-900">
       <Navbar />
       <div className="flex flex-row">
         <div className="h-full w-2/3 p-16">
-          <h1 className="text-white text-3xl">Resources</h1>
-          <div className="p-6 ">
-            <ResourcesTable>
-              <ResourceItem
-                name="rummage-test"
-                type="Virtual Machine"
-                ip="192.168.0.2"
-                url="/servers/someUUIDHere"
-              />
-              <ResourceItem
-                name="vlctyhost-panel"
-                type="Static Web Application"
-                ip="https://panel.vlcty.host"
-                url="/servers/someUUIDHere"
-              />
-              <ResourceItem
-                name="velocity-auth"
-                type="Serverless Function"
-                ip="https://api.panel.vlcty.host/auth"
-                url="/servers/someUUIDHere"
-              />
-              <ResourceItem
-                name="vlcty.host"
-                type="DNS Zone"
-                ip="vlcty.host"
-                url="/servers/someUUIDHere"
-              />
-              <ResourceItem
-                name="vlcty-dev-cluster"
-                type="Kubernetes Cluster"
-                ip="kube.dev.infra.vlcty.host"
-                url="/servers/someUUIDHere"
-              />
-            </ResourcesTable>
+          <div className="flex flex-row gap-6">
+            <img
+              src="https://media.discordapp.net/attachments/885540138241908756/1010447244660592740/c0d3_1.png"
+              className="rounded-full h-16 w-16"
+            />
+            <div>
+              <h1 className="text-white text-3xl">Owen Rummage</h1>
+              <h2 className="text-zinc-400 text-md">owen@vlcty.host</h2>
+            </div>
           </div>
         </div>
         <div className="h-full w-1/3 p-16 flex flex-col gap-6">
@@ -71,4 +46,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Profile;
