@@ -71,6 +71,13 @@ const Home: NextPage = () => {
           </button>
         </div>
       </div>
+      <div className="absolute inset-x-0 bottom-0 h-10 bg-zinc-800 flex flex-row justify-center items-center">
+        <span>
+          <Link href="">Copyright</Link>
+          <Link href="">Feedback</Link>
+          <Link href="">Contact</Link>
+        </span>
+      </div>
     </div>
   );
 };
