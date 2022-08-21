@@ -70,7 +70,7 @@ const Home: NextPage = () => {
           </button>
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-0 h-16 bg-zinc-800 align-text-bottom">
+      <div className="absolute inset-x-0 bottom-0 h-16 bg-zinc-800 inline align-middle">
         08
       </div>
     </div>
