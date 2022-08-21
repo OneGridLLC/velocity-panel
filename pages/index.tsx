@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 const DOMAIN = "skribe.dev";
 
@@ -69,9 +70,6 @@ const Home: NextPage = () => {
             Join the Discord
           </button>
         </div>
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-16 bg-zinc-800 inline align-middle">
-        08
       </div>
     </div>
   );
