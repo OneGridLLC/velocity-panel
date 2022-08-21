@@ -2,8 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import ActionItem from "../../components/homepage/ActionItem";
-import ResourceItem from "../../components/homepage/ResourceItem";
-import ResourcesTable from "../../components/homepage/ResourcesTable";
+import {
+  ResourceItem,
+  ResourceTable,
+} from "../../components/homepage/ResourceTable";
 import Navbar from "../../components/Navbar";
 import ProjectTable from "../../components/profile/ProjectTable";
 import ProjectTableItem from "../../components/profile/ProjectTableItem";

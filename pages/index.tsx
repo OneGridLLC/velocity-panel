@@ -18,8 +18,7 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#7ED957" />
         <meta property="og:image" content="/card.png" />
       </Head>
-      {/* p-[6vw]*/}
-      <div className="lg:w-3/6 p-3 pt-2 pl-5">
+      <div className="lg:w-3/6 p-[3vw]">
         <h1 className="text-[16vw] lg:text-[4vw] mb-0">
           <span className="font-bold text-white text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-600">
             Velocity Host
@@ -46,7 +45,7 @@ const Home: NextPage = () => {
           <li>Managed Databases</li>
           <li className="list-none mt-4">
             Want something else?{" "}
-            <a href="#" className="font-bold text-sky-500">
+            <a href="https://airtable.com/shrlUNfJ21pZ4HDw7" className="font-bold text-blue-500">
               Let us know!
             </a>
           </li>
@@ -70,13 +69,6 @@ const Home: NextPage = () => {
             Join the Discord
           </button>
         </div>
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-10 bg-zinc-800 flex flex-row justify-center items-center">
-        <span>
-          <Link href="">Copyright</Link>
-          <Link href="">Feedback</Link>
-          <Link href="">Contact</Link>
-        </span>
       </div>
     </div>
   );

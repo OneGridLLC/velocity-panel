@@ -1,10 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import ActionItem from "../../components/homepage/ActionItem";
-import ResourceItem from "../../components/homepage/ResourceItem";
-import ResourcesTable from "../../components/homepage/ResourcesTable";
 import Navbar from "../../components/Navbar";
+import {
+  ResourceItem,
+  ResourceTable,
+} from "../../components/homepage/ResourceTable";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +17,7 @@ const Home: NextPage = () => {
         <div className="h-full w-2/3 p-16">
           <h1 className="text-white text-3xl">Resources</h1>
           <div className="p-6 ">
-            <ResourcesTable>
+            <ResourceTable>
               <ResourceItem
                 name="rummage-test"
                 type="Virtual Machine"
@@ -45,7 +48,7 @@ const Home: NextPage = () => {
                 ip="kube.dev.infra.vlcty.host"
                 url="/app/servers/someUUIDHere"
               />
-            </ResourcesTable>
+            </ResourceTable>
           </div>
         </div>
         <div className="h-full w-1/3 p-16 flex flex-col gap-6">
@@ -64,8 +67,9 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-screen flex flex-row text-gray-500 justify-center absolute bottom-3">
-        <h1>Design by Lea Gray - Implemented by Owen Rummage</h1>
+      <div className="absolute inset-x-0 bottom-0 h-10   bg-zinc-800 flex flex-row justify-center items-center gap-12 font-semibold text-zinc-300">
+        <Link href="">Service Status</Link>
+        <Link href="">Open a Ticket</Link>
       </div>
     </div>
   );
