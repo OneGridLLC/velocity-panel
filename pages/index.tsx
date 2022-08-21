@@ -1,71 +1,77 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import ActionItem from "../components/homepage/ActionItem";
-import ResourceItem from "../components/homepage/ResourceItem";
-import ResourcesTable from "../components/homepage/ResourcesTable";
-import Navbar from "../components/Navbar";
+
+const DOMAIN = "skribe.dev";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col w-screen h-screen bg-zinc-900">
-      <Navbar />
-      <div className="flex flex-row">
-        <div className="h-full w-2/3 p-16">
-          <h1 className="text-white text-3xl">Resources</h1>
-          <div className="p-6 ">
-            <ResourcesTable>
-              <ResourceItem
-                name="rummage-test"
-                type="Virtual Machine"
-                ip="192.168.0.2"
-                url="/servers/someUUIDHere"
-              />
-              <ResourceItem
-                name="vlctyhost-panel"
-                type="Static Web Application"
-                ip="https://panel.vlcty.host"
-                url="/servers/someUUIDHere"
-              />
-              <ResourceItem
-                name="velocity-auth"
-                type="Serverless Function"
-                ip="https://api.panel.vlcty.host/auth"
-                url="/servers/someUUIDHere"
-              />
-              <ResourceItem
-                name="vlcty.host"
-                type="DNS Zone"
-                ip="vlcty.host"
-                url="/servers/someUUIDHere"
-              />
-              <ResourceItem
-                name="vlcty-dev-cluster"
-                type="Kubernetes Cluster"
-                ip="kube.dev.infra.vlcty.host"
-                url="/servers/someUUIDHere"
-              />
-            </ResourcesTable>
-          </div>
-        </div>
-        <div className="h-full w-1/3 p-16 flex flex-col gap-6">
-          <h1 className="text-white text-3xl">Recent Actions</h1>
-          <div className="flex flex-col gap-4 px-2">
-            <ActionItem
-              name="Update Server"
-              author="Owen Rummage"
-              description="Owen Rummage updated the IP Address of 'rummage-test'."
-            />
-            <ActionItem
-              name="Create Serverless"
-              author="Owen Rummage"
-              description="Owen Rummage created 'velocity-auth'."
-            />
-          </div>
+    <div className="flex flex-col lg:flex-row bg-zinc-900 h-[100vh] overflow-auto">
+      <Head>
+        <meta property="og:title" content="Skribe.dev" />
+        <meta
+          property="og:description"
+          content="The developers writing tool!"
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://skribe.dev" />
+        <meta name="theme-color" content="#7ED957" />
+        <meta property="og:image" content="/card.png" />
+      </Head>
+      {/* p-[6vw]*/}
+      <div className="lg:w-3/6 p-3 pt-2 pl-5">
+        <h1 className="text-[16vw] lg:text-[4vw] mb-0">
+          <span className="font-bold text-white text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-600">
+            Velocity Host
+          </span>
+        </h1>
+        <p className="text-[4vw] lg:text-[1vw] pl-7 text-white font-bold">
+          the developers hosting provider
+        </p>
+        <div className="mt-12"></div>
+        <p className="text-sm lg:text-xl text-white mt-6">
+          Velocity is a modern approach to hosting, with developer centric tools
+          and ecosystems we allow for you to spend your time building things,
+          after all, thats why your here isnt it?
+        </p>
+        <div className="mt-4"></div>
+        <ul className="text-gray-400 text-sm lg:text-xl list-disc list-inside mt-8">
+          <li className="list-none text-2xl mb-2 font-bold">
+            Some of our products...
+          </li>
+          <li>Serverless Functions </li>
+          <li>Virtual Machines</li>
+          <li>Container Apps</li>
+          <li>Bare Metal Compute</li>
+          <li>Managed Databases</li>
+          <li className="list-none mt-4">
+            Want something else?{" "}
+            <a href="#" className="font-bold text-sky-500">
+              Let us know!
+            </a>
+          </li>
+        </ul>
+        <div className="flex md:flex-row flex-col mt-[2vh] w-full justify-start gap-3">
+          {/* <input className="px-3 py-1 mr-4 bg-zinc-800 text-white text-[16px] outline-none rounded-[8px] w-2/4" /> */}
+          <button
+            onClick={() => {
+              window.location.href = "https://airtable.com/shrlUNfJ21pZ4HDw7";
+            }}
+            className="px-3 py-1 rounded-[8px] text-[20px] text-white font-semibold bg-gradient-to-br from-green-400 to-green-500 active:from-green-600 active:to-green-600"
+          >
+            Join the Waitlist
+          </button>
+          <button
+            onClick={() => {
+              window.location.href = "https://discord.gg/hmatHHW2e3";
+            }}
+            className="px-3 py-1 rounded-[8px] text-[20px] text-white font-semibold bg-gradient-to-br from-purple-400 to-purple-500 active:from-purple-600 active:to-purple-600"
+          >
+            Join the Discord
+          </button>
         </div>
       </div>
-      <div className="w-screen flex flex-row text-gray-500 justify-center absolute bottom-3">
-        <h1>Design by Lea Gray - Implemented by Owen Rummage</h1>
+      <div className="absolute inset-x-0 bottom-0 h-16 bg-zinc-800 align-text-bottom">
+        08
       </div>
     </div>
   );

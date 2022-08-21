@@ -5,29 +5,33 @@ import ActionItem from "../../components/homepage/ActionItem";
 import ResourceItem from "../../components/homepage/ResourceItem";
 import ResourcesTable from "../../components/homepage/ResourcesTable";
 import Navbar from "../../components/Navbar";
+import ProjectTable from "../../components/profile/ProjectTable";
+import ProjectTableItem from "../../components/profile/ProjectTableItem";
 
-const Home: NextPage = () => {
+const Profile: NextPage = () => {
   return (
     <div className="flex flex-col w-screen h-screen bg-zinc-900">
       <Navbar />
       <div className="flex flex-row">
         <div className="h-full w-2/3 p-16">
-          <div className="flex flex-row">
+          <div className="flex flex-row gap-6">
+            <img
+              src="https://media.discordapp.net/attachments/885540138241908756/1010447244660592740/c0d3_1.png"
+              className="rounded-full h-16 w-16"
+            />
             <div>
-              <h1 className="text-white text-3xl">Rummage Test VM</h1>
-              <h2 className="text-zinc-400 text-md">Virtual Machine</h2>
+              <h1 className="text-white text-3xl">Owen Rummage</h1>
+              <h2 className="text-zinc-400 text-md">owen@vlcty.host</h2>
             </div>
-            <div className="ml-auto flex flex-row gap-6 items-end">
-              <h1 className="text-green-300 text-md hover:cursor-pointer select-none">
-                Start
-              </h1>
-              <h1 className="text-red-300 text-md hover:cursor-pointer select-none">
-                Stop
-              </h1>
-              <h1 className="text-blue-300 text-md hover:cursor-pointer select-none">
-                Console
-              </h1>
-            </div>
+          </div>
+          <div className="flex flex-col mt-6">
+            <h2 className="text-white text-3xl">Your Spaces</h2>
+            <div className="h-6" />
+            <ProjectTableItem
+              name="OneGrid LLC"
+              owner="Owen Rummage"
+              url="/projects/someUUIDHere"
+            />
           </div>
         </div>
         <div className="h-full w-1/3 p-16 flex flex-col gap-6">
@@ -53,4 +57,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Profile;
