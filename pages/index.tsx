@@ -8,15 +8,14 @@ const Home: NextPage = () => {
   return (
     <div className="flex flex-col lg:flex-row bg-zinc-900 h-[100vh] overflow-auto">
       <Head>
-        <meta property="og:title" content="Skribe.dev" />
+        <meta property="og:title" content="Velocity Hosting" />
         <meta
           property="og:description"
-          content="The developers writing tool!"
+          content="Digitalocean level experience, on a lowendtalk level budget!"
         />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://skribe.dev" />
-        <meta name="theme-color" content="#7ED957" />
-        <meta property="og:image" content="/card.png" />
+        <meta property="og:url" content="https://vlcty.host" />
+        <meta name="theme-color" content="#3b82f6" />
       </Head>
       <div className="lg:w-3/6 p-[3vw]">
         <h1 className="text-[16vw] lg:text-[4vw] mb-0">
@@ -45,7 +44,10 @@ const Home: NextPage = () => {
           <li>Managed Databases</li>
           <li className="list-none mt-4">
             Want something else?{" "}
-            <a href="https://airtable.com/shrlUNfJ21pZ4HDw7" className="font-bold text-blue-500">
+            <a
+              href="https://airtable.com/shrlUNfJ21pZ4HDw7"
+              className="font-bold text-blue-500"
+            >
               Let us know!
             </a>
           </li>
