@@ -1,9 +1,6 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import TextButton from "../../../components/global/TextButton";
 import ActionItem from "../../../components/homepage/ActionItem";
-import ResourceItem from "../../../components/homepage/ResourceItem";
-import ResourcesTable from "../../../components/homepage/ResourcesTable";
 import Navbar from "../../../components/Navbar";
 
 const Home: NextPage = () => {
@@ -18,15 +15,9 @@ const Home: NextPage = () => {
               <h2 className="text-zinc-400 text-md">Virtual Machine</h2>
             </div>
             <div className="ml-auto flex flex-row gap-6 items-end">
-              <h1 className="text-green-300 text-md hover:cursor-pointer select-none">
-                Start
-              </h1>
-              <h1 className="text-red-300 text-md hover:cursor-pointer select-none">
-                Stop
-              </h1>
-              <h1 className="text-blue-300 text-md hover:cursor-pointer select-none">
-                Console
-              </h1>
+              <TextButton className="text-green-300">Start</TextButton>
+              <TextButton className="text-red-300">Stop</TextButton>
+              <TextButton className="text-blue-300">Console</TextButton>
             </div>
           </div>
         </div>

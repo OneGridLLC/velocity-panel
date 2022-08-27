@@ -1,13 +1,7 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import ActionItem from "../../../components/homepage/ActionItem";
+import PaddedButton from "../../../components/global/PaddedButton";
 import Navbar from "../../../components/Navbar";
-import {
-  TicketTable,
-  TicketItem,
-} from "../../../components/tickets/TicketTable";
+import TicketReply from "../../../components/tickets/TicketReply";
 
 const TicketHome: NextPage = () => {
   return (
@@ -64,93 +58,51 @@ const TicketHome: NextPage = () => {
                     placeholder="Type your response here!"
                   />
                   <div className="flex flex-row gap-12">
-                    <button className="bg-blue-500 text-white  text-lg p-2 px-6 rounded-xl">
-                      Reply
-                    </button>
-                    <button className="bg-yellow-500 text-white  text-lg p-2 px-6 rounded-xl">
-                      Change Status
-                    </button>
-                    <button className="bg-red-500 text-white  text-lg p-2 px-6 rounded-xl">
-                      Close Ticket
-                    </button>
+                    <PaddedButton className="bg-blue-500 text-white">Reply</PaddedButton>
+                    <PaddedButton className="bg-yellow-500 text-white">Change Status</PaddedButton>
+                    <PaddedButton className="bg-red-500 text-white">Close Ticket</PaddedButton>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-zinc-800 w-fullrounded-2xl">
-                <div className="w-full flex flex-row p-4 rounded-2xl">
-                  <img
-                    src="https://pbs.twimg.com/profile_images/1523887399507415040/4wrMCQ8i_400x400.jpg"
-                    className="rounded-full h-14 w-14"
-                  />
-                  <div className="text-white ml-4">
-                    <h1 className="text-2xl">Lea Gray</h1>
-                    <h1 className="font-semibold">lleyton@fyralabs.com</h1>
-                    <p className="pt-6 text-white">
-                      I need to add hard drives to my server. 2x4tb should be
-                      suffucuent. Im goign to need them by the 24th of August so
-                      that we can match our deadline for deployment. Is this
-                      possible?
-                    </p>
-                  </div>
-                  <h1 className="text-lg text-white ml-auto">
-                    08/21/2022{" "}
-                    <span className="text-md font-bold text-zinc-600">
-                      (02:09)
-                    </span>
-                  </h1>
-                </div>
-              </div>
+              <TicketReply 
+                name="Lea Gray"
+                email="lleyton@fyralabs.com"
+                avatar="https://pbs.twimg.com/profile_images/1523887399507415040/4wrMCQ8i_400x400.jpg"
+                body={`
+                  I need to add hard drives to my server. 2x4tb should be
+                  suffucuent. Im goign to need them by the 24th of August so
+                  that we can match our deadline for deployment. Is this
+                  possible?
+                `}
+                date={new Date()}
+              />
 
-              <div className="bg-zinc-800 w-fullrounded-2xl">
-                <div className="w-full flex flex-row  p-4 rounded-2xl">
-                  <img
-                    src="https://pbs.twimg.com/profile_images/1523887399507415040/4wrMCQ8i_400x400.jpg"
-                    className="rounded-full h-14 w-14"
-                  />
-                  <div className="text-white ml-4">
-                    <h1 className="text-2xl">Lea Gray</h1>
-                    <h1 className="font-semibold">lleyton@fyralabs.com</h1>
-                    <p className="pt-6 text-white">
-                      I need to add hard drives to my server. 2x4tb should be
-                      suffucuent. Im goign to need them by the 24th of August so
-                      that we can match our deadline for deployment. Is this
-                      possible?
-                    </p>
-                  </div>
-                  <h1 className="text-lg text-white ml-auto">
-                    08/21/2022{" "}
-                    <span className="text-md font-bold text-zinc-600">
-                      (02:09)
-                    </span>
-                  </h1>
-                </div>
-              </div>
+              <TicketReply 
+                name="Lea Gray"
+                email="lleyton@fyralabs.com"
+                avatar="https://pbs.twimg.com/profile_images/1523887399507415040/4wrMCQ8i_400x400.jpg"
+                body={`
+                  I need to add hard drives to my server. 2x4tb should be
+                  suffucuent. Im goign to need them by the 24th of August so
+                  that we can match our deadline for deployment. Is this
+                  possible?
+                `}
+                date={new Date()}
+              />
 
-              <div className="bg-zinc-800 w-fullrounded-2xl mb-5">
-                <div className="w-full flex flex-row  p-4 rounded-2xl">
-                  <img
-                    src="https://pbs.twimg.com/profile_images/1523887399507415040/4wrMCQ8i_400x400.jpg"
-                    className="rounded-full h-14 w-14"
-                  />
-                  <div className="text-white ml-4">
-                    <h1 className="text-2xl">Lea Gray</h1>
-                    <h1 className="font-semibold">lleyton@fyralabs.com</h1>
-                    <p className="pt-6 text-white">
-                      I need to add hard drives to my server. 2x4tb should be
-                      suffucuent. Im goign to need them by the 24th of August so
-                      that we can match our deadline for deployment. Is this
-                      possible?
-                    </p>
-                  </div>
-                  <h1 className="text-lg text-white ml-auto">
-                    08/21/2022{" "}
-                    <span className="text-md font-bold text-zinc-600">
-                      (02:09)
-                    </span>
-                  </h1>
-                </div>
-              </div>
+              <TicketReply 
+                name="Lea Gray"
+                email="lleyton@fyralabs.com"
+                avatar="https://pbs.twimg.com/profile_images/1523887399507415040/4wrMCQ8i_400x400.jpg"
+                body={`
+                  I need to add hard drives to my server. 2x4tb should be
+                  suffucuent. Im goign to need them by the 24th of August so
+                  that we can match our deadline for deployment. Is this
+                  possible?
+                `}
+                date={new Date()}
+              />
             </div>
           </div>
         </div>

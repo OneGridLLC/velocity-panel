@@ -1,14 +1,8 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import ActionItem from "../../components/homepage/ActionItem";
-import {
-  ResourceItem,
-  ResourceTable,
-} from "../../components/homepage/ResourceTable";
 import Navbar from "../../components/Navbar";
-import ProjectTable from "../../components/profile/ProjectTable";
 import ProjectTableItem from "../../components/profile/ProjectTableItem";
+import UserCard from "../../components/profile/UserCard";
 
 const Profile: NextPage = () => {
   return (
@@ -16,16 +10,11 @@ const Profile: NextPage = () => {
       <Navbar />
       <div className="flex flex-row">
         <div className="h-full w-2/3 p-16">
-          <div className="flex flex-row gap-6">
-            <img
-              src="https://media.discordapp.net/attachments/885540138241908756/1010447244660592740/c0d3_1.png"
-              className="rounded-full h-16 w-16"
-            />
-            <div>
-              <h1 className="text-white text-3xl">Owen Rummage</h1>
-              <h2 className="text-zinc-400 text-md">owen@vlcty.host</h2>
-            </div>
-          </div>
+          <UserCard 
+            avatar="https://media.discordapp.net/attachments/885540138241908756/1010447244660592740/c0d3_1.png"
+            name="Owen Rummage"
+            email="owen@vlcty.host"
+          />
           <div className="flex flex-col mt-6">
             <h2 className="text-white text-3xl">Your Spaces</h2>
             <div className="h-6" />
